@@ -1,7 +1,15 @@
 # going-viral
-What music features make a song go viral? A data analysis of spotify viral charts
+A data analysis of spotify viral charts
 
-# Spotify API provides the following features
+
+
+## Analysis 1: Can we predict a song's viral qualities?
+* Modeling the musical qualites of songs charts features in the spotify viral charts 2017-2020
+* Models: K Nearest Neighbours, Decision Tree
+
+## Analysis 2: Local music taste: Can we model in which country a viral song might perform particularly well
+
+## Spotify API provides the following features
 * acousticness: A confidence measure from 0 to 100 of whether the track is acoustic. 100 represents high confidence the track is acoustic. 
 * danceability: describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 is least danceable and 100 is most danceable. * energy: Energy is a measure from 0 to 100 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. 
 * instrumentalness: Predicts whether a track contains no vocals. "Ooh" and "aah" sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly "vocal". The closer the instrumentalness value is to 100, the greater likelihood the track contains no vocal content. Values above 50 are intended to represent instrumental tracks, but confidence is higher as the value approaches 100. 
