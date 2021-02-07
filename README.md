@@ -7,7 +7,8 @@ A data analysis of spotify viral charts
 * Modeling the musical qualites of songs charts features in the spotify viral charts 2017-2020
 * Models: K Nearest Neighbours, Decision Tree
 
-## Analysis 2: Local music taste: Can we model in which country a viral song might perform particularly well
+## Analysis 2: Modeling local success
+Can we model in which country a song has best chances to go viral?
 
 ## Spotify API provides the following features
 * acousticness: A confidence measure from 0 to 100 of whether the track is acoustic. 100 represents high confidence the track is acoustic. 
