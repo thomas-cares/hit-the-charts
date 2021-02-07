@@ -4,7 +4,7 @@ A data analysis of spotify viral charts
 
 
 ## Analysis 1: Can we predict a song's viral qualities?
-* Modeling the musical qualites of songs charts features in the spotify viral charts 2017-2020
+* Modeling the musical qualites of songs featured in the spotify viral charts 2017-2020
 * Models: K Nearest Neighbours, Decision Tree
 
 ## Analysis 2: Modeling local success
