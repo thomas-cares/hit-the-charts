@@ -3,8 +3,8 @@ A data analysis of spotify viral charts
 
 ## Analysis 1: Can we identify a song's viral qualities?
 * analysing the musical features of approx 6.000 songs in the viral charts against approx 20.000 random songs on spotify.
-* viral songs obtained by crawling - see jupyter notebook: ["fetching-data.ipynb"]https://github.com/thomas-cares/going-viral/blob/main/fetching-data.ipynb
-* non-viral songs optained from kaggle dataset - see [Kaggle Spotify Dataset]https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks
+* viral songs obtained by crawling - see jupyter notebook: ["fetching-data.ipynb"](https://github.com/thomas-cares/going-viral/blob/main/fetching-data.ipynb)
+* non-viral songs optained from kaggle dataset - see [Kaggle Spotify Dataset](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks)
 * Modeling the musical qualites of songs featured in the spotify viral charts 2017-2020
 * Models: K Nearest Neighbours, Decision Tree
 * Predictor: Enter a spotify track URL and get feedback whether a song meets the musical qualities 
