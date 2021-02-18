@@ -2,7 +2,7 @@
 
 * Modeling the Spotify streaming charts of 20 countries from 2018 to 2020
 * evaluating the likelihood of a song meeting the musical qualities of these charts songs
-* pass a a Spotify track URL, a Spotify album URL or a list of Spotify track URLs and have an evaluation returned
+* pass a Spotify track URL, a Spotify album URL or a list of Spotify track URLs and have an evaluation returned
 * set up a charts extraction tool that should allow for feeding the model with an up to date set of charts.
 
 ## MOTIVATION
@@ -67,10 +67,6 @@ The program allows you to pass a list of Spotify song IDs returning an assessmen
 * setting up a function allowing the user to paste a Spotify song URL to get an evaluation of the respective song in return. 
 ---
 Please note: I am well aware there is a lot more to a song than its musical features to go viral: Lyrics, promotional budgets and the pop cultural phenomenon of memes striking at seemingly random very likely comes into play. In this analysis I merely focus on musical features.
-
-# CONCLUSION
-Even though my model achieves decent accuracy scores it is struggling with precision.
-
 
 ## SPOTIFY API FEATURES
 Spotify API provides the following features that allowed me to create a model
