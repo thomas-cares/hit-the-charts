@@ -1,18 +1,80 @@
-# going-viral
-A data analysis of spotify viral charts
+# predict a hit
 
-## Analysis 1: Can we identify a song's viral qualities?
-* analysing the musical features of approx 6.000 songs in the viral charts against approx 20.000 random songs on spotify.
-* viral songs obtained by crawling - see jupyter notebook: ["fetching-data.ipynb"](https://github.com/thomas-cares/going-viral/blob/main/fetching-data.ipynb)
-* non-viral songs optained from kaggle dataset - see [Kaggle Spotify Dataset](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks)
-* Modeling the musical qualites of songs featured in the spotify viral charts 2017-2020
-* Models: K Nearest Neighbours, Decision Tree
-* Predictor: Enter a spotify track URL and get feedback whether a song meets the musical qualities 
+* Modeling the Spotify streaming charts of 20 countries from 2018 to 2020
+* evaluating the likelihood of a song meeting the musical qualities of these charts songs
+* pass a a Spotify track URL, a Spotify album URL or a list of Spotify track URLs and have an evaluation returned
+* set up a charts extraction tool that should allow for feeding the model with an up to date set of charts.
 
-## Analysis 2: Modeling local success
-Can we model in which country a song has best chances to go viral?
+## MOTIVATION
+After recording a set of songs choosing the right single to spearhead the promotional campaign is a common challenge faced by artists, labels and their publicists. Picking the right single is decisive for the successfull introduction of a new artist or a new album to the limited attention span of the public. On top it is a major financial commitment as a single release goes along with major expenditures like a music video production or spending on social media ads as well as media plugging form online to radio. 
 
-## Spotify API provides the following features
+I'd like to introduce a modes machine learning tool to assist with making the decision for the right song to get things started.
+ 
+
+## METHODE
+I will use supervised learning to model the musical features characterising the songs making up the Spotify streaming charts for the past 3 years in Europe and North America.
+
+### APPLIED MODELS
+* random forest
+* support vector classifier
+* decision tree
+* k nearest neighbour
+
+## RUN THE PREDICTOR
+The program allows you to pass a list of Spotify song IDs returning an assessment to what extend each song meets the qualities of the songs currently reigning the charts.
+* open Jupyter Notebook "charts_predictor.ipynb"
+* set your personal values to "my_client_ID" and "my_client_secret": for details see "AUTHENTIFICATION"
+* run all cells
+
+## AUTHENTIFICATION
+* To run this you have to provide a valid Spotify Client ID and Client Secret
+* you have to be registered with [Spotify for developers](https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app) to obtain those.
+
+
+## FILES
+
+* "charts_predictor.ipynb" here is where the analysis, the modelling and the predicting is happening
+
+* "fetching-data.ipynb" here is where the scraping is happening. The script actually provides multiple options to adapt the data gathering process. Change the set of countries you want to explore, the time period you want to investigate, the time frequency charts are sampled or if you'd rather look into the Spotify viral charts than the streaming chart.
+
+* the data folder is where the CSVs extracted in the scraping process are dumped. 
+
+* data/regional: The sub folder "regional" is the default target when extracting streaming charts. 
+
+* data/viral is the target when extracting Spotify viral charts. They need to be treated differently as their CSVs are set up and need to be handled differently to turn them into viable pandas data frames. 
+
+* data/kaggle I did use a kaggle dataset with originally 160.000 Spotify songs subsetted for the years of release 2018 to 2020. After excluding all charts songs from the kaggle dataset they were my base of non charting songs to model my charts songs against. 
+
+## DATA SOURCES
+* [Spotify Charts](https://www.spotifycharts.de)
+* [kaggle spotify dataset](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks)
+
+## CHALLENGES DEALT WITH
+* setting up a web scraping tool to extract Spotify charts that can be customised to include the list of countries you need. Also the time period to be extracted as well as the frequency (for ex every day vs every 90 days) can be customised for various investigation purposes.
+
+* cleaning and wrangling the extracted data with regex, pandas and list comprehension
+
+* authentification with Spotify for developers with 
+
+* collecting the music features for thousands of songs through Spotify API, which need some error handling
+
+* exploring, understand and visualisation with maptplotlib, seaborn, pandas
+
+* standardizing continuous variables, labelling categorical variables
+
+* modelling the charts songs against a base of non-charting songs with models such as random forest or the support vector classifier provided by the sklearn library
+
+* setting up a function allowing the user to paste a Spotify song URL to get an evaluation of the respective song in return. 
+---
+Please note: I am well aware there is a lot more to a song than its musical features to go viral: Lyrics, promotional budgets and the pop cultural phenomenon of memes striking at seemingly random very likely comes into play. In this analysis I merely focus on musical features.
+
+# CONCLUSION
+Even though my model achieves decent accuracy scores it is struggling with precision.
+
+
+## SPOTIFY API FEATURES
+Spotify API provides the following features that allowed me to create a model
+
 * acousticness: A confidence measure from 0 to 100 of whether the track is acoustic. 100 represents high confidence the track is acoustic. 
 * danceability: describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 is least danceable and 100 is most danceable. 
 * energy: Energy is a measure from 0 to 100 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. 
