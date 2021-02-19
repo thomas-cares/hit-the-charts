@@ -1,6 +1,6 @@
 # HIT THE CHARTS
 
-* Modeling the Spotify streaming charts of 20 countries from 2018 to 2020
+* Modelling the Spotify streaming charts of 20 countries from 2018 to 2020
 * evaluating the likelihood of a song meeting the musical qualities of these charts songs
 * pass a Spotify track URL, a Spotify album URL or a list of Spotify track URLs and have an evaluation returned
 * set up a charts extraction tool that should allow for feeding the model with an up to date set of charts.
