@@ -1,6 +1,8 @@
 # personal stuff
 legacy/
 
+charts_predictor_login_env.ipynb
+
 # Byte-compiled / optimized / DLL files
 
 __pycache__/
