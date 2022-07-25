@@ -8,7 +8,7 @@
 ## MOTIVATION
 After recording a set of songs choosing the right single to spearhead the promotional campaign is a common challenge faced by artists, labels and their publicists. Picking the right single is decisive for the successfull introduction of a new artist or a new album to the limited attention span of the public. On top it is a major financial commitment as a single release goes along with major expenditures like a music video production or spending on social media ads as well as media plugging form online to radio. 
 
-I'd like to introduce a modes machine learning tool to assist with making the decision for the right song to get things started.
+I'd like to introduce a modest machine learning tool to assist with making the decision for the right song to get things started.
  
 
 ## METHODE
